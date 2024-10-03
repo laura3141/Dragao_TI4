@@ -3,11 +3,11 @@ extends Area2D
 var animation_speed = 2
 var moving = false
 var tile_size = 64
+var start_position = Vector2(0,0)  # Posição inicial (em tiles)
 var inputs = {
 	"ui_right": Vector2.RIGHT,
 	"ui_left": Vector2.LEFT,
 	"ui_up": Vector2.UP,
-	"ui_down": Vector2.DOWN
 }
 
 @onready var ray = $RayCast2D  # A referência do RayCast2D
@@ -15,8 +15,10 @@ var inputs = {
 
 func _ready():
 	if ray:
-		position = position.snapped(Vector2.ONE * tile_size)
-		position += Vector2.ONE * tile_size / 2
+		# Define a posição inicial do dragão em pixels
+		position = start_position * tile_size
+		print("Posição inicial do dragão:", position)
+
 		ray.enabled = true  # Habilita o RayCast2D
 	else:
 		print("RayCast2D não encontrado!")
