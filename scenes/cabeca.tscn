@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2ptj86vq2bbg"]
+
+[ext_resource type="Texture2D" uid="uid://dx3ag3r0xhdux" path="res://assets/cabeca.png" id="1_b5jd8"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_b5jd8")

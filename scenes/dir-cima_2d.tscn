@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcw6chkap7lyp"]
+
+[ext_resource type="Texture2D" uid="uid://ccsym478mh6p6" path="res://dir-cima.png" id="1_ofnv4"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_ofnv4")

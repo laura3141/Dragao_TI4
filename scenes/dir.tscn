@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsc2greub3hdw"]
+
+[ext_resource type="Texture2D" uid="uid://3p2nywvy0yek" path="res://virardir.png" id="1_keior"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_keior")
