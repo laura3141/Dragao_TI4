@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://esywf0ii8i6u"]
+[gd_scene load_steps=15 format=3 uid="uid://esywf0ii8i6u"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_fmw02"]
 [ext_resource type="Texture2D" uid="uid://bj2ambwei5ogi" path="res://assets/bg.png" id="2_fps3c"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8ubkccxl66ag" path="res://scenes/esticaesq.tscn" id="6_54lp1"]
 [ext_resource type="PackedScene" uid="uid://cad25ojl47q8" path="res://scenes/game_over_menu.tscn" id="6_xkat8"]
 [ext_resource type="Texture2D" uid="uid://nhjdyay18w62" path="res://assets/rabo.png" id="7_01mnl"]
+[ext_resource type="PackedScene" uid="uid://dkkgbjhndydxx" path="res://scenes/esticabaixo.tscn" id="7_6ihgy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_byuym"]
 texture = ExtResource("2_fps3c")
@@ -989,6 +990,7 @@ dir_scene = ExtResource("4_51lb3")
 esq_scene = ExtResource("5_dr8op")
 esticadir_scene = ExtResource("5_r7b5j")
 esticaesq_scene = ExtResource("6_54lp1")
+esticarbaixo_scene = ExtResource("7_6ihgy")
 
 [node name="Area2D" type="TileMap" parent="."]
 position = Vector2(450, 32)

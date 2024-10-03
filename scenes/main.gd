@@ -6,6 +6,7 @@ extends Node
 @export var esq_scene: PackedScene
 @export var esticadir_scene: PackedScene  # Nova cena esticada para direita
 @export var esticaesq_scene: PackedScene  # Nova cena esticada para esquerda
+@export var esticarbaixo_scene: PackedScene  # Nova cena esticada para baixo
 
 # Game variables
 var score: int
@@ -107,6 +108,11 @@ func move_snake():
 					add_scene_dir()
 				else:
 					add_scene_esticadir()
+			elif move_direction == down:
+				if consecutive_moves == 1:
+					add_scene_snake_segment()
+				else:
+					add_scene_esticarbaixo()
 
 			move_by_one_tile()
 
@@ -160,6 +166,15 @@ func add_scene_esticadir():
 		print("Cena esticada para direita instanciada.")
 	else:
 		print("A cena 'esticadir_scene' não foi atribuída no editor!")
+
+func add_scene_esticarbaixo():
+	if esticarbaixo_scene != null:
+		var scene_instance = esticarbaixo_scene.instantiate()
+		scene_instance.position = (snake_data[0] * cell_size) + Vector2(0, cell_size)
+		add_child(scene_instance)
+		print("Cena esticada para baixo instanciada.")
+	else:
+		print("A cena 'esticarbaixo_scene' não foi atribuída no editor!")
 
 func add_scene_snake_segment():
 	if snake_segment != null:
